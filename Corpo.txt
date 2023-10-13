@@ -1,0 +1,20 @@
+SISTEMA DE GERENCIAMENTO DE MÚSICA
+
+ITENS A CONSIDERAR NO PROJETO
+1. Músicas
+	Título, duração, artista, álbum, gênero e ano de lançamento.
+2. Artistas
+	Nome, ouvintes mensais, músicas populares, discografia, playlists incluídas, albuns incluídos e biografia.
+3. Álbuns
+	Título, lista de faixas, artista, ano de lançamento, gênero e duração.
+4. Playlists
+	Música, albúm, duração da faixa, número de músicas, duração da playlist.
+5. Favoritos
+	Músicas, álbuns, artistas, número de músicas
+6. Pesquisa
+	Músicas, artistas ou álbuns específicos.
+
+8. Administração
+	Painel de administração para gerenciar o catálogo de músicas, usuários e outras configurações do sistema.
+9. Análise de Dados
+	Insights sobre o uso do sistema, preferências dos usuários e tendências musicais.
