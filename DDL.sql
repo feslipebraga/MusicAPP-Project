@@ -5,8 +5,7 @@ CREATE DOMAIN dm_vc255 AS VARCHAR(255);
 -- 	Nome, view: ouvintes mensais, view: músicas populares, view: discografia, view: playlists incluídas, view: albuns incluídos e biografia.
 CREATE TABLE artistas(
     id SERIAL PRIMARY KEY,
-    nome dm_vc50,
-    biografia dm_vc255
+    nome dm_vc50
 );
 
 -- 	Título, view: lista de faixas, fk: artista, ano de lançamento, gênero e view: duração.
@@ -15,9 +14,9 @@ CREATE TABLE albuns(
     titulo dm_vc50,
     artistaID INTEGER,
     genero dm_vc20,
-    anoLancamento YEAR
+    anoLancamento INTEGER
     CHECK (anoLancamento <= EXTRACT(YEAR FROM CURRENT_DATE)),
-    FOREIGN KEY artistaID REFERENCES artistas(id) ON DELETE CASCADE
+    FOREIGN KEY (artistaID) REFERENCES artistas(id) ON DELETE CASCADE
 );
 
 -- 	Título, duração, fk: artista, fk: álbum, join: gênero e join: ano de lançamento.
