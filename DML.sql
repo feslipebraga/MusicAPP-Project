@@ -1,74 +1,69 @@
-INSERT INTO artistas (nome)
-VALUES
-('Troye Sivan'), ('Taylor Swift');
+-- ARTISTAS
+INSERT INTO artistas (nome) VALUES ('Taylor Swift'), ('Troye Sivan'), ('Doja Cat'), ('Calvin Harris'), ('Anitta'), ('Demi Lovato'), ('Lady Gaga'), ('Ariana Grande');
 
-INSERT INTO albuns (titulo, artistaID, genero, anoLancamento) VALUES
-('Something to Give Each Other', 1, 'Pop', 2023),
-('folklore (deluxe version)', 2, 'Alternativo', 2020),
-('Blue Neighbourhood (Deluxe)', 1, 'Pop', 2015),
-('1989 Deluxe Edition', 2, 'Pop', 2014);
+-- GENEROS
+INSERT INTO generos (nome) VALUES
+('Pop'), ('Rock'), ('Hip Hop'), ('Eletrônica'), ('R&B'), ('Indie'), ('Alternativo'), ('Country');
 
+-- ALBUNS
+INSERT INTO albuns (titulo, artistaID, generoID, anoLancamento) VALUES
+('Lover', 1, 1, 2019),
+('Kisses', 5, 1, 2019),
+('Funk Wav Bounces Vol. 1', 4, 4, 2017),
+('Planet Her', 3, 3, 2021);
 
-INSERT INTO musicas (titulo, duracao, artistaID, albumID) VALUES
-('Rush', INTERVAL '2 minutes 36 seconds', 1, 1),
-('What''s The Time Where You Are?', INTERVAL '3 minutes 24 seconds', 1, 1),
-('One Of Your Girls', INTERVAL '3 minutes 1 seconds', 1, 1),
-('In My Room (feat. Guitarricadelafuente)', INTERVAL '3 minutes 13 seconds', 1, 1),
-('Still Got It', INTERVAL '3 minutes 29 seconds', 1, 1),
-('Can''t Go Back, Baby', INTERVAL '3 minutes 22 seconds', 1, 1),
-('Got Me Started', INTERVAL '3 minutes 18 seconds', 1, 1),
-('Silly', INTERVAL '3 minutes 39 seconds', 1, 1),
-('Honey', INTERVAL '3 minutes 27 seconds', 1, 1),
-('How to Stay with You', INTERVAL '3 minutes 16 seconds', 1, 1),
+-- Inserção dos álbuns da Taylor Swift
+INSERT INTO albuns (titulo, artistaID, generoID, anoLancamento) VALUES 
+('Taylor Swift', 1, 7, 2006),
+('Fearless', 1, 7, 2008),
+('Speak Now', 1, 7, 2010),
+('Red', 1, 2, 2012),
+('1989', 1, 1, 2014),
+('Reputation', 1, 1, 2017),
+('Lover', 1, 1, 2019),
+('Folklore', 1, 6, 2020),
+('Evermore', 1, 6, 2020);
 
-('Cardigan', INTERVAL '3 minutes 59 seconds', 2, 2),
-('The 1', INTERVAL '3 minutes 30 seconds', 2, 2),
-('The Last Great American Dynasty', INTERVAL '3 minutes 51 seconds', 2, 2),
-('Exile', INTERVAL '4 minutes 45 seconds', 2, 2),
-('My Tears Ricochet', INTERVAL '4 minutes 15 seconds', 2, 2),
-('Mirrorball', INTERVAL '3 minutes 29 seconds', 2, 2),
-('Seven', INTERVAL '3 minutes 28 seconds', 2, 2),
-('August', INTERVAL '4 minutes 21 seconds', 2, 2),
-('This Is Me Trying', INTERVAL '3 minutes 15 seconds', 2, 2),
-('Illicit Affairs', INTERVAL '3 minutes 11 seconds', 2, 2),
-('Invisible String', INTERVAL '4 minutes 12 seconds', 2, 2),
-('Mad Woman', INTERVAL '3 minutes 57 seconds', 2, 2),
-('Epiphany', INTERVAL '4 minutes 49 seconds', 2, 2),
-('Betty', INTERVAL '4 minutes 54 seconds', 2, 2),
-('Peace', INTERVAL '3 minutes 54 seconds', 2, 2),
-('Hoax', INTERVAL '3 minutes 40 seconds', 2, 2),
-('The Lakes', INTERVAL '3 minutes 32 seconds', 2, 2),
+-- Inserção dos álbuns da Anitta
+INSERT INTO albuns (titulo, artistaID, generoID, anoLancamento) VALUES 
+('Anitta', 5, 1, 2013),
+('Ritmo Perfeito', 5, 1, 2014),
+('Bang', 5, 1, 2015);
 
-('Wild', INTERVAL '3 minutes 47 seconds', 1, 3),
-('Bite', INTERVAL '3 minutes 6 seconds', 1, 3),
-('Fools', INTERVAL '3 minutes 40 seconds', 1, 3),
-('Ease', INTERVAL '3 minutes 34 seconds', 1, 3),
-('The Quiet', INTERVAL '3 minutes 46 seconds', 1, 3),
-('DKLA', INTERVAL '4 minutes 14 seconds', 1, 3),
-('Talk Me Down', INTERVAL '3 minutes 57 seconds', 1, 3),
-('Cool', INTERVAL '3 minutes 19 seconds', 1, 3),
-('Heaven', INTERVAL '4 minutes 21 seconds', 1, 3),
-('Youth', INTERVAL '3 minutes 5 seconds', 1, 3),
-('Lost Boy', INTERVAL '3 minutes 42 seconds', 1, 3),
-('for him.', INTERVAL '3 minutes 29 seconds', 1, 3),
-('Suburbia', INTERVAL '3 minutes 54 seconds', 1, 3),
-('Too Good', INTERVAL '3 minutes 45 seconds', 1, 3),
-('Blue', INTERVAL '3 minutes 30 seconds', 1, 3),
-('Wild', INTERVAL '4 minutes 18 seconds', 1, 3),
+-- USUARIOS
+INSERT INTO usuarios (username, email, senha, dataRegistro) VALUES 
+('feslipebraga', 'feslipebraga@gmail.com', 'xyc720208', '2023-10-22 15:42:29'),
+('AnaSilva', 'ana.silva@email.com', 'P@ssw0rd', '2023-10-01 10:30:45'),
+('CarlosSantos', 'carlos.santos@email.com', 'SecurePass123', '2023-10-02 11:25:30'),
+('MarianaLima', 'mariana.lima@email.com', 'StrongPwd!234', '2023-10-03 12:15:20'),
+('PedroPereira', 'pedro.pereira@email.com', 'P@ssTweeter', '2023-10-04 14:45:55'),
+('CamilaRodrigues', 'camila.rodrigues@email.com', 'SnaPw0rd', '2023-10-05 16:20:10'),
+('RafaelMartins', 'rafael.martins@email.com', 'BookL0ver!', '2023-10-06 18:05:35'),
+('JulianaFernandes', 'juliana.fernandes@email.com', 'GeekP@ss', '2023-10-07 20:40:45'),
+('LucasOliveira', 'lucas.oliveira@email.com', 'MusiC@tunes', '2023-10-08 22:15:55'),
+('AmandaCosta', 'amanda.costa@email.com', 'G@merP@ss', '2023-10-09 23:59:59'),
+('MarcosSousa', 'marcos.sousa@email.com', 'Wanderl#st1', '2023-10-10 09:30:15');
 
-('Welcome to New York', INTERVAL '3 minutes 32 seconds', 2, 4),
-('Blank Space', INTERVAL '3 minutes 51 seconds', 2, 4),
-('Style', INTERVAL '3 minutes 51 seconds', 2, 4),
-('Out of the Woods', INTERVAL '3 minutes 55 seconds', 2, 4),
-('All You Had to Do Was Stay', INTERVAL '3 minutes 13 seconds', 2, 4),
-('Shake It Off', INTERVAL '3 minutes 39 seconds', 2, 4),
-('I Wish You Would', INTERVAL '3 minutes 27 seconds', 2, 4),
-('Bad Blood', INTERVAL '3 minutes 31 seconds', 2, 4),
-('Wildest Dreams', INTERVAL '3 minutes 40 seconds', 2, 4),
-('How You Get the Girl', INTERVAL '4 minutes 7 seconds', 2, 4),
-('This Love', INTERVAL '4 minutes 10 seconds', 2, 4),
-('I Know Places', INTERVAL '3 minutes 15 seconds', 2, 4),
-('Clean', INTERVAL '4 minutes 31 seconds', 2, 4),
-('Wonderland', INTERVAL '4 minutes 5 seconds', 2, 4),
-('You Are in Love', INTERVAL '4 minutes 27 seconds', 2, 4),
-('New Romantics', INTERVAL '3 minutes 50 seconds', 2, 4);
+-- PLAYLISTS
+INSERT INTO playlists (nome) VALUES ('Today''s Top Hits'), ('RapCaviar'), ('Hot Country'), ('Mint'), ('Viva Latino'), ('New Music Friday'), ('Peaceful Piano'), ('All Out ''60s'), ('Rock Classics'), ('90s Smash Hits');
+
+--PLAYLISTS_MUSICAS
+-- Inserção das músicas na playlist "Today's Top Hits"
+INSERT INTO musicas_playlists (musicaID, playlistID) VALUES 
+(1, 1),(4, 1),(7, 1),(9, 1),(12, 1),(15, 1),(18, 1),(21, 1),(24, 1),(27, 1);
+
+-- Inserção das músicas na playlist "RapCaviar"
+INSERT INTO musicas_playlists (musicaID, playlistID) VALUES 
+(2, 2),(5, 2),(8, 2),(10, 2),(13, 2),(16, 2),(19, 2),(22, 2),(25, 2),(28, 2);
+
+-- Inserção das músicas na playlist "Hot Country"
+INSERT INTO musicas_playlists (musicaID, playlistID) VALUES 
+(3, 3),(6, 3),(11, 3),(14, 3),(17, 3),(20, 3),(23, 3),(26, 3),(29, 3),(30, 3);
+
+-- Inserção das músicas na playlist "Mint"
+INSERT INTO musicas_playlists (musicaID, playlistID) VALUES 
+(31, 4),(32, 4),(33, 4),(34, 4),(35, 4),(36, 4),(37, 4),(38, 4),(39, 4),(40, 4);
+
+-- Inserção das músicas na playlist "Viva Latino"
+INSERT INTO musicas_playlists (musicaID, playlistID) VALUES 
+(41, 5),(42, 5),(43, 5),(44, 5),(45, 5),(46, 5),(47, 5),(48, 5),(49, 5),(50, 5);
