@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS albuns;
 DROP TABLE IF EXISTS musicas;
 DROP TABLE IF EXISTS playlists;
 DROP TABLE IF EXISTS usuarios;
-DROP TABLE IF EXISTS musicas_playlists;
-DROP TABLE IF EXISTS artistas_favoritados;
+DROP TABLE IF EXISTS musicasPlaylists;
+DROP TABLE IF EXISTS artistasFavoritados;
 DROP TABLE IF EXISTS follows;
 DROP TABLE IF EXISTS musicasEscutadas;
 
