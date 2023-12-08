@@ -22,14 +22,18 @@ CREATE OR REPLACE PROCEDURE p_AdicionarMusicaPlaylist(
 )
 AS $$
 BEGIN
-    INSERT INTO musicasPlaylists (musicaID, playlistID)
-    VALUES (id_musica, id_playlist)
-    WHERE playlistID = id_playlist
-    AND EXISTS (
+    -- Verifica se a playlist existe e se o usuario é o criador
+    IF EXISTS (
         SELECT 1
         FROM playlists
         WHERE id = id_playlist
         AND criadorID = id_usuario
-    );
+    ) THEN
+        -- Adiciona a música na playlist
+        INSERT INTO musicasPlaylists (musicaID, playlistID)
+        VALUES (id_musica, id_playlist);
+    ELSE
+        RAISE EXCEPTION 'Playlist não encontrada ou o usuário não é o criador';
+    END IF;
 END;
 $$ LANGUAGE plpgsql;

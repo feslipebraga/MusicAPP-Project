@@ -1,13 +1,13 @@
-DROP TABLE IF EXISTS artistas;
-DROP TABLE IF EXISTS generos;
-DROP TABLE IF EXISTS albuns;
-DROP TABLE IF EXISTS musicas;
-DROP TABLE IF EXISTS playlists;
-DROP TABLE IF EXISTS usuarios;
-DROP TABLE IF EXISTS musicasPlaylists;
-DROP TABLE IF EXISTS artistasFavoritados;
-DROP TABLE IF EXISTS follows;
-DROP TABLE IF EXISTS musicasEscutadas;
+DROP TABLE IF EXISTS artistas CASCADE;
+DROP TABLE IF EXISTS generos CASCADE;
+DROP TABLE IF EXISTS albuns CASCADE;
+DROP TABLE IF EXISTS musicas CASCADE;
+DROP TABLE IF EXISTS playlists CASCADE;
+DROP TABLE IF EXISTS usuarios CASCADE;
+DROP TABLE IF EXISTS musicasPlaylists CASCADE;
+DROP TABLE IF EXISTS artistasFavoritos CASCADE;
+DROP TABLE IF EXISTS follows CASCADE;
+DROP TABLE IF EXISTS musicasEscutadas CASCADE;
 
 -- Criando os domínios
 CREATE DOMAIN dm_pequeno AS VARCHAR(20) NOT NULL;
@@ -38,6 +38,7 @@ CREATE TABLE albuns(
 
 CREATE TABLE musicas(
     id SERIAL PRIMARY KEY,
+    numero int,
     titulo dm_grande,
     duracao interval,
     artistaID INTEGER,
@@ -213,10 +214,10 @@ INSERT INTO musicas (numero, titulo, duracao, artistaID, albumID) VALUES
 
 -- Inserindo valores para a tabela usuarios
 INSERT INTO usuarios (username, email, senha, dataRegistro) VALUES 
-('AnaSilva', 'ana.silva@email.com', 'P@ssw0rd'),
+('AnaSilva', 'ana.silva@email.com', 'P@ssw0rd', DEFAULT),
 ('CarlosSantos', 'carlos.santos@email.com', 'SecurePass123', '2023-09-10 11:25:30'),
 ('MarianaLima', 'mariana.lima@email.com', 'StrongPwd!234', '2023-08-03 12:15:20'),
-('PedroPereira', 'pedro.pereira@email.com', 'P@ssTweeter'),
+('PedroPereira', 'pedro.pereira@email.com', 'P@ssTweeter', DEFAULT),
 ('CamilaRodrigues', 'camila.rodrigues@email.com', 'SnaPw0rd', '2023-06-05 16:20:10'),
 ('RafaelMartins', 'rafael.martins@email.com', 'BookL0ver!', '2023-01-10 18:05:35'),
 ('JulianaFernandes', 'juliana.fernandes@email.com', 'GeekP@ss', '2023-02-07 20:40:45'),
